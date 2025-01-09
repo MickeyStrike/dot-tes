@@ -45,12 +45,6 @@ const Title = styled.h2`
   font-size: 1.5rem;
 `;
 
-const SubTitle = styled.h3`
-  color: #555;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-`;
-
 const InfoItem = styled.div`
   margin-bottom: 1rem;
   

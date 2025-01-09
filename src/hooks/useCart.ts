@@ -68,7 +68,6 @@ export const useCart = () => {
       return false;
     }
 
-    const total = items.reduce((acc, item) => acc + (item.product.price * item.quantity * 16000), 0);
     addToPurchaseHistory(items);
     return true;
   };
