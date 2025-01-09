@@ -25,6 +25,8 @@ This is a simple React.js application that simulates an e-commerce platform. The
 - Reusable and styled components.
 - TypeScript support for better type checking.
 - Routing and authentication using React Router.
+- State Management using React Context
+- Fetch data axios with instance and custom hooks services
 - ESLint for code linting and best practices.
 
 ---
