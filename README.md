@@ -1,50 +1,127 @@
-# React + TypeScript + Vite
+# React.js E-commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React.js application that simulates an e-commerce platform. The app uses dummy JSON data for products and includes essential React features like conditional rendering, reusable components, reactivity, and routing with authentication.
 
-Currently, two official plugins are available:
+## Main Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- View list products
+- View detail products
+- View carousel products
+- View recommendation products
+- User can use slider products
+- User can add a shopping cart
+- User can buy now
+- User can login to dashboard
+- User can view account detail
+- User can view total purchased items
+- User can view total amount spent
+- User can view purchase history
 
-## Expanding the ESLint configuration
+## Other Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Login functionality with route protection (private routes).
+- Logout functionality to clear user sessions.
+- Conditional rendering based on user interaction.
+- Reusable and styled components.
+- TypeScript support for better type checking.
+- Routing and authentication using React Router.
+- ESLint for code linting and best practices.
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installation
+
+Follow these steps to run the application locally:
+
+### Prerequisites
+
+- Node.js (v16 or later) and npm installed.
+
+### Steps
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/MickeyStrike/dot-tes.git
+   cd dot-tes
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open the application in your browser:
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+## Dummy Data
+
+To test the app, use the following dummy login credentials:
+
+- **Username**: `admin`
+- **Password**: `admin`
+
+Dummy product data is included in the application using [dummyjson](https://dummyjson.com)
+
+---
+
+## Application Structure
+
+```
+src/
+|-- components/    # Reusable components like product cards and headers.
+|-- pages/         # Page-level components (Login, Home, ProductDetails).
+|-- constant/      # Constant folder containing the base url of dummyjson and the endpoint of dummyjson
+|-- hooks/         # Hooks folder containing custom hooks
+|-- providers/     # Contains to store context using react context
+|-- router/        # Router folder contains routers from each page
+|-- App.tsx        # Main app entry point with routing setup.
+|-- index.tsx      # Application bootstrap file.
+|-- styles/        # Global and styled component styles.
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Scripts
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+- Start the development server:
+  ```bash
+  npm run dev
+  ```
+
+- Build the production version:
+  ```bash
+  npm run build
+  ```
+
+- Run ESLint to check for linting issues:
+  ```bash
+  npm run lint
+  ```
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Contributing
+
+Feel free to open issues or submit pull requests to enhance this application. Ensure your contributions adhere to the project's coding standards by running:
+
+```bash
+npm run lint
 ```
+
+---
+
