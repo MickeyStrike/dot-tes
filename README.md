@@ -111,6 +111,12 @@ src/
 
 ---
 
+## Performa Aplikasi
+
+![Performance Aplikasi](src/assets/Screenshot%202025-01-10%20at%2007.26.09.png)
+
+---
+
 ## License
 
 This project is licensed under the MIT License.
